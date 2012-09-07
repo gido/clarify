@@ -11,7 +11,7 @@
     <a href="#" class="btn btn-danger btn-confirm"></a>
   </div>
 </div>
-<script type="text/javascript" src="<?= R ?>js/js.php"></script>
+<script type="text/javascript" src="<?php echo R ?>js/js.php"></script>
 <script type="text/javascript">
 (function($) {
     $(document).ready(function() {

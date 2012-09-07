@@ -43,11 +43,11 @@ $css = trim(str_replace(array("\n","'"), array("","\'"), file_get_contents(TERRI
 header('Content-Type: text/javascript');
 ?>
 document.write('<style type="text/css">');
-document.write('<?= $css ?>');
+document.write('<?php echo $css ?>');
 document.write('</style>');
-document.write('<div class="st-widget <?= $class ?>">');
-document.write('<img src="<?= config('application.domain') ?><?= config('application.baseurl') ?>api/screen/thumbnail/<?= $screen_id ?>/<?= $width ?>" width="<?= $width ?>" />');
-<? foreach ($comments as $comment) { ?>
-document.write('<div class="st-def" style="top:<?= round($comment['y']*$factor+$offset) ?>px;left:<?= round($comment['x']*$factor+$offset) ?>px;"><a href="javascript:;" class="dot"><span class="nr"><?= $comment['nr'] ?></span></a></div>');
-<? } ?>
+document.write('<div class="st-widget <?php echo $class ?>">');
+document.write('<img src="<?php echo config('application.domain') ?><?php echo config('application.baseurl') ?>api/screen/thumbnail/<?php echo $screen_id ?>/<?php echo $width ?>" width="<?php echo $width ?>" />');
+<?php foreach ($comments as $comment) { ?>
+document.write('<div class="st-def" style="top:<?php echo round($comment['y']*$factor+$offset) ?>px;left:<?php echo round($comment['x']*$factor+$offset) ?>px;"><a href="javascript:;" class="dot"><span class="nr"><?php echo $comment['nr'] ?></span></a></div>');
+<?php } ?>
 document.write('</div>');
